@@ -72,11 +72,11 @@ const HomePage = () => {
               </div>
               
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Soluciones de Higiene y Desinfección Certificada Quimxel en Sevilla y Córdoba
+                Soluciones de Higiene y Desinfección Certificada
               </h1>
               
               <p className="text-xl text-blue-100 mb-8">
-                Más de 35 años de experiencia en productos químicos profesionales. Calidad certificada + Soporte técnico y logística local garantizada.
+                Más de 35 años de experiencia en productos químicos profesionales. Calidad certificada + Soporte técnico y logística garantizada.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">

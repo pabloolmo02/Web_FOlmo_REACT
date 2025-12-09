@@ -30,11 +30,11 @@ const Footer = () => {
           <div>
             <span className="font-semibold text-lg block mb-4" style={{ color: '#1b1847' }}>Productos</span>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/productos?cat=alimentaria" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Alimentaria</Link></li>
-              <li><Link to="/productos?cat=lavanderia" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Lavandería Profesional</Link></li>
-              <li><Link to="/productos?cat=horeca" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>HORECA</Link></li>
+              <li><Link to="/productos?cat=industria-alimentaria" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Alimentaria</Link></li>
+              <li><Link to="/productos?cat=lavanderia-profesional" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Lavandería Profesional</Link></li>
+              <li><Link to="/productos?cat=productos-certificados" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>HORECA</Link></li>
               <li><Link to="/productos?cat=sanitaria" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Sanitaria</Link></li>
-              <li><Link to="/productos?cat=ecolabel" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Línea Ecolabel</Link></li>
+              <li><Link to="/productos?cat=productos-certificados" className="transition-colors" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>Línea Ecolabel</Link></li>
             </ul>
           </div>
 
