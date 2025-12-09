@@ -5,6 +5,11 @@
 
 @layer base {
   :root {
+    --brand-dark: #1b1847;
+    --brand-blue: #1c256b;
+    --brand-base: #a5d2f2;
+    --brand-light: #c6eaf9;
+    
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -41,5 +46,8 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .font-logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }

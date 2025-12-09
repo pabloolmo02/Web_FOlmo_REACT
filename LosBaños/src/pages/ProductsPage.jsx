@@ -65,7 +65,15 @@ const ProductsPage = () => {
       </Helmet>
 
       <div className="bg-slate-50 min-h-screen">
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12">
+        <div
+          className="text-white py-12"
+          style={{
+            backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">Catálogo de Productos</h1>
             <p className="text-xl text-blue-100">Soluciones químicas profesionales certificadas</p>
@@ -78,7 +86,7 @@ const ProductsPage = () => {
               <div className="bg-white rounded-xl shadow-sm p-6 sticky top-24">
                 <div className="flex items-center space-x-2 mb-4">
                   <Filter className="h-5 w-5 text-slate-600" />
-                  <span className="font-semibold text-slate-900 text-lg">Filtros</span>
+                  <span className="font-semibold text-lg" style={{ color: '#1b1847' }}>Filtros</span>
                 </div>
 
                 <div className="space-y-2">
@@ -88,9 +96,10 @@ const ProductsPage = () => {
                       onClick={() => setSelectedCategory(cat.value)}
                       className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
                         selectedCategory === cat.value
-                          ? 'bg-blue-100 text-blue-900 font-medium'
+                          ? 'font-medium'
                           : 'text-slate-700 hover:bg-slate-100'
                       }`}
+                      style={selectedCategory === cat.value ? { backgroundColor: '#a5d2f2', color: '#1b1847' } : {}}
                     >
                       {cat.label}
                     </button>
@@ -114,12 +123,12 @@ const ProductsPage = () => {
               </div>
 
               {!isApproved && (
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                <div className="border rounded-xl p-6 mb-6" style={{ backgroundColor: '#e3f2fd', borderColor: '#a5d2f2' }}>
                   <div className="flex items-start space-x-3">
-                    <Lock className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                    <Lock className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#15277a' }} />
                     <div>
-                      <h3 className="font-semibold text-blue-900 mb-2">Acceso Restringido a Precios</h3>
-                      <p className="text-blue-800 mb-4">
+                      <h3 className="font-semibold mb-2" style={{ color: '#15277a' }}>Acceso Restringido a Precios</h3>
+                      <p className="mb-4" style={{ color: '#1b1847' }}>
                         Los precios y la funcionalidad de compra están disponibles solo para cuentas B2B validadas.
                       </p>
                       <Button asChild>
@@ -158,21 +167,21 @@ const ProductsPage = () => {
                       
                       <div className="p-4">
                         <div className="text-xs text-slate-500 mb-1">Ref: {product.reference}</div>
-                        <h3 className="font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors h-12">
+                        <h3 className="font-semibold mb-2 transition-colors h-12" style={{ color: '#1b1847' }} onMouseEnter={(e) => e.target.style.color = '#15277a'} onMouseLeave={(e) => e.target.style.color = '#1b1847'}>
                           {product.name}
                         </h3>
                         <p className="text-sm text-slate-600 mb-3 line-clamp-2">{product.description}</p>
                         
                         <div className="flex items-center justify-between">
                           {isApproved ? (
-                            <span className="text-lg font-bold text-blue-600">{product.price.toFixed(2)}€</span>
+                            <span className="text-lg font-bold" style={{ color: '#15277a' }}>{product.price.toFixed(2)}€</span>
                           ) : (
                             <span className="text-sm text-slate-500 flex items-center">
                               <Lock className="h-3 w-3 mr-1" />
                               Precio B2B
                             </span>
                           )}
-                          <div className="flex items-center text-blue-600 text-sm">
+                          <div className="flex items-center text-sm" style={{ color: '#15277a' }}>
                             <FileText className="h-4 w-4 mr-1" />
                             <span>FDS</span>
                           </div>

@@ -13,7 +13,12 @@ const CompanyPage = () => {
       </Helmet>
 
       <div className="bg-slate-50">
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <div className="text-white py-20" style={{
+          backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -39,7 +44,7 @@ const CompanyPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Nuestra Historia</h2>
+              <h2 className="text-3xl font-bold mb-6" style={{ color: '#1b1847' }}>Nuestra Historia</h2>
               <div className="prose prose-lg text-slate-700">
                 <p className="mb-4">
                   Con más de 35 años de trayectoria, QUÍMICAS QUIMXEL, S.L. se ha consolidado como un referente en la fabricación de productos químicos profesionales de alta calidad para los sectores de HORECA, Lavandería Industrial, Limpieza Sanitaria y Automoción.
@@ -74,10 +79,10 @@ const CompanyPage = () => {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-8 text-center"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <TrendingUp className="h-8 w-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#e3f2fd' }}>
+                <TrendingUp className="h-8 w-8" style={{ color: '#15277a' }} />
               </div>
-              <h3 className="text-4xl font-bold text-blue-600 mb-2">35+</h3>
+              <h3 className="text-4xl font-bold mb-2" style={{ color: '#15277a' }}>35+</h3>
               <p className="text-slate-600">Años de Experiencia</p>
             </motion.div>
 
@@ -114,8 +119,8 @@ const CompanyPage = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center space-x-3 mb-6">
-                  <Shield className="h-8 w-8 text-blue-600" />
-                  <h2 className="text-3xl font-bold text-slate-900">Política de Calidad</h2>
+                  <Shield className="h-8 w-8" style={{ color: '#15277a' }} />
+                  <h2 className="text-3xl font-bold" style={{ color: '#1b1847' }}>Política de Calidad</h2>
                 </div>
                 <div className="prose text-slate-700">
                   <p className="mb-4">
@@ -132,14 +137,14 @@ const CompanyPage = () => {
               </div>
               <div className="flex justify-center">
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-blue-50 rounded-xl p-6 text-center">
-                    <Award className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                    <p className="font-bold text-slate-900">ISO 9001</p>
+                  <div className="rounded-xl p-6 text-center" style={{ backgroundColor: '#e3f2fd' }}>
+                    <Award className="h-12 w-12 mx-auto mb-3" style={{ color: '#15277a' }} />
+                    <p className="font-bold" style={{ color: '#1b1847' }}>ISO 9001</p>
                     <p className="text-sm text-slate-600">Gestión de Calidad</p>
                   </div>
                   <div className="bg-green-50 rounded-xl p-6 text-center">
                     <Award className="h-12 w-12 text-green-600 mx-auto mb-3" />
-                    <p className="font-bold text-slate-900">ISO 14001</p>
+                    <p className="font-bold" style={{ color: '#1b1847' }}>ISO 14001</p>
                     <p className="text-sm text-slate-600">Gestión Ambiental</p>
                   </div>
                 </div>
@@ -158,7 +163,7 @@ const CompanyPage = () => {
               <div>
                 <div className="flex items-center space-x-3 mb-6">
                   <Leaf className="h-8 w-8 text-green-600" />
-                  <h2 className="text-3xl font-bold text-slate-900">Compromiso Ambiental</h2>
+                  <h2 className="text-3xl font-bold" style={{ color: '#1b1847' }}>Compromiso Ambiental</h2>
                 </div>
                 <div className="prose text-slate-700">
                   <p className="mb-4">

@@ -23,7 +23,12 @@ const DocumentationPage = () => {
       </Helmet>
 
       <div className="bg-slate-50 min-h-screen">
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+        <div className="text-white py-16" style={{
+          backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -44,8 +49,8 @@ const DocumentationPage = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
             <div className="flex items-center space-x-3 mb-6">
-              <Search className="h-6 w-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-slate-900">Buscador de Documentación</h2>
+              <Search className="h-6 w-6" style={{ color: '#15277a' }} />
+              <h2 className="text-2xl font-bold" style={{ color: '#1b1847' }}>Buscador de Documentación</h2>
             </div>
             
             <p className="text-slate-600 mb-6">
@@ -75,7 +80,7 @@ const DocumentationPage = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">{product.name}</h3>
+                    <h3 className="font-semibold mb-1" style={{ color: '#1b1847' }}>{product.name}</h3>
                     <p className="text-sm text-slate-600">Ref: {product.reference}</p>
                   </div>
                   {product.certifications.includes('ecolabel') && (
@@ -88,8 +93,8 @@ const DocumentationPage = () => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors">
                     <div className="flex items-center space-x-2">
-                      <FileText className="h-5 w-5 text-blue-600" />
-                      <span className="text-sm font-medium text-slate-900">FDS</span>
+                      <FileText className="h-5 w-5" style={{ color: '#15277a' }} />
+                      <span className="text-sm font-medium" style={{ color: '#1b1847' }}>FDS</span>
                     </div>
                     <Button variant="ghost" size="sm">
                       <Download className="h-4 w-4" />
@@ -98,8 +103,8 @@ const DocumentationPage = () => {
 
                   <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors">
                     <div className="flex items-center space-x-2">
-                      <FileText className="h-5 w-5 text-blue-600" />
-                      <span className="text-sm font-medium text-slate-900">Ficha Técnica</span>
+                      <FileText className="h-5 w-5" style={{ color: '#15277a' }} />
+                      <span className="text-sm font-medium" style={{ color: '#1b1847' }}>Ficha Técnica</span>
                     </div>
                     <Button variant="ghost" size="sm">
                       <Download className="h-4 w-4" />
@@ -110,7 +115,7 @@ const DocumentationPage = () => {
                     <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                       <div className="flex items-center space-x-2">
                         <Shield className="h-5 w-5 text-green-600" />
-                        <span className="text-sm font-medium text-slate-900">Registro AEMPS</span>
+                        <span className="text-sm font-medium" style={{ color: '#1b1847' }}>Registro AEMPS</span>
                       </div>
                       <Button variant="ghost" size="sm">
                         <Download className="h-4 w-4" />
@@ -122,7 +127,7 @@ const DocumentationPage = () => {
                     <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                       <div className="flex items-center space-x-2">
                         <Shield className="h-5 w-5 text-green-600" />
-                        <span className="text-sm font-medium text-slate-900">Certificado Ecolabel</span>
+                        <span className="text-sm font-medium" style={{ color: '#1b1847' }}>Certificado Ecolabel</span>
                       </div>
                       <Button variant="ghost" size="sm">
                         <Download className="h-4 w-4" />
@@ -140,11 +145,11 @@ const DocumentationPage = () => {
             </div>
           )}
 
-          <div className="mt-12 bg-blue-50 border border-blue-200 rounded-xl p-8">
-            <h3 className="text-xl font-semibold text-blue-900 mb-4">
+          <div className="mt-12 border rounded-xl p-8" style={{ backgroundColor: '#e3f2fd', borderColor: '#a5d2f2' }}>
+            <h3 className="text-xl font-semibold mb-4" style={{ color: '#15277a' }}>
               ¿Necesita Asesoramiento para su Plan de Limpieza APPCC/HACCP?
             </h3>
-            <p className="text-blue-800 mb-6">
+            <p className="mb-6" style={{ color: '#1b1847' }}>
               Nuestro equipo técnico está disponible para ayudarle a elaborar un plan de limpieza y desinfección que cumpla con todos los requisitos normativos de su sector.
             </p>
             <Button size="lg">

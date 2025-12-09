@@ -34,11 +34,11 @@ const HomePage = () => {
   ];
 
   const categories = [
-    { name: 'Alimentaria', slug: 'alimentaria', description: 'Biocidas TP2/TP4 con registro AEMPS' },
-    { name: 'Lavandería Profesional', slug: 'lavanderia', description: 'Detergentes industriales de alto rendimiento' },
-    { name: 'HORECA', slug: 'horeca', description: 'Soluciones integrales para hostelería' },
+    { name: 'Alimentaria', slug: 'industria-alimentaria', description: 'Biocidas TP2/TP4 con registro AEMPS' },
+    { name: 'Lavandería Profesional', slug: 'lavanderia-profesional', description: 'Detergentes industriales de alto rendimiento' },
+    { name: 'HORECA', slug: 'limpieza-general', description: 'Soluciones integrales para hostelería' },
     { name: 'Sanitaria', slug: 'sanitaria', description: 'Desinfección certificada para centros de salud' },
-    { name: 'Ecolabel', slug: 'ecolabel', description: 'Productos ultraconcentrados sostenibles' },
+    { name: 'Ecolabel', slug: 'productos-certificados', description: 'Productos ultraconcentrados sostenibles' },
     { name: 'Automoción', slug: 'automocion', description: 'Limpieza profesional de vehículos' }
   ];
 
@@ -49,12 +49,12 @@ const HomePage = () => {
         <meta name="description" content="Distribución exclusiva de productos químicos profesionales QUIMXEL certificados ISO 9001/14001 y Ecolabel para HORECA, Lavandería y Limpieza Industrial en Sevilla y Córdoba. Entrega en 48h." />
       </Helmet>
 
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-        </div>
+      <section className="relative text-white py-20 overflow-hidden" style={{
+        backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -88,7 +88,7 @@ const HomePage = () => {
                         <ChevronRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/10">
+                    <Button size="lg" asChild className="bg-white text-blue-900 hover:bg-blue-50">
                       <Link to="/productos">Ver Catálogo</Link>
                     </Button>
                   </>
@@ -218,7 +218,7 @@ const HomePage = () => {
               </ul>
               
               <Button size="lg" asChild>
-                <Link to="/productos?cat=ecolabel">
+                <Link to="/productos?cat=productos-certificados">
                   Descubrir Línea Ecolabel
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -241,7 +241,12 @@ const HomePage = () => {
       </section>
 
       {!isAuthenticated && (
-        <section className="py-20 bg-blue-900 text-white">
+        <section className="py-20 text-white" style={{
+          backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}>
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
